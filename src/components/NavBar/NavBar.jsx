@@ -1,4 +1,5 @@
 import CarritoIcon from "../cartIcon/CartIcon"
+import { Link } from "react-router-dom"
 
 function NavBar() {
     return (
@@ -13,16 +14,16 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Productos</a>
+                            <Link className="nav-link" to="/catalogo">Catalogo de prodcutos</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Nosotros</a>
+                            <Link className="nav-link" to="/catalogo/Audio">Audio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Contacto</a>
+                            <Link className="nav-link" to="#">Contacto</Link>
                         </li>
                     </ul>
                 </div>
