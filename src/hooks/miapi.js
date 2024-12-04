@@ -355,5 +355,22 @@
         }, 500);
       })
     }
+
+    export const createOrder = (order) => {
+      console.log("Orden creada:", order);
+      return Promise.resolve({ id: Date.now().toString() }); // Devuelve un ID simulado
+    };
+
+    export const updateProductStock = (id, quantity) => {
+      const product = products.find((prod) => prod.id === id);
+      if (product) {
+        product.stock -= quantity;
+      }
+    };
+
+    export const getProductsByIds = (ids) => {
+      return products.filter((prod) => ids.includes(prod.id));
+    };
+    
   
   

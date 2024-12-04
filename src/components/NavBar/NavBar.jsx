@@ -1,11 +1,11 @@
-import CarritoIcon from "../cartIcon/CartIcon"
+import CartWidget from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 
-function NavBar() {
+function NavBar({cartCount, tittle}) {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     Mi Ecommerce
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,12 +22,9 @@ function NavBar() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/catalogo/Audio">Audio</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="#">Contacto</Link>
-                        </li>
                     </ul>
                 </div>
-                <CarritoIcon />
+                <CartWidget cartCount={cartCount}/>
             </div>
         </nav>
     )

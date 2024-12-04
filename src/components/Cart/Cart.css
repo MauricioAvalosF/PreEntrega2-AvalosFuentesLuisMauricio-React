@@ -1,0 +1,17 @@
+.carrito {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito h1 {
+    width: 100%;
+}
+
+.carrito .total {
+    align-self: end;
+    padding: 0 20%;
+    margin: 3rem 0;
+}

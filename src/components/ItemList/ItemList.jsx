@@ -1,11 +1,14 @@
-import Item from "../Item/Item"
+import Item from "../ItemDetail/ItemDetail"
+import './ItemList.css'
 
-function ItemList({products}) {
+function ItemList({ products }) {
   return (
-    <div className="container d-flex flex-wrap justify-content-center align-items-center" style={{gap:"40px"}}>
-        {products.map(product => <Item key={product.id} product={product} />)}
-    </div>
-  )
+      <div className="lsita">
+          {products.map((product) => (
+              <Item key={product.id} product={product} /> // Asegúrate de que `product` tenga las propiedades correctas
+          ))}
+      </div>
+  );
 }
 
 export default ItemList

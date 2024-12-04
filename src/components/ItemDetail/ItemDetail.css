@@ -1,0 +1,48 @@
+ .carta {
+    border: 2px solid #0000005b;
+    width: 25rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+    border-radius: 13px;
+    box-shadow: 10px 10px 10px #0000001c;
+    transition: ease all 0.2s;
+}
+
+ .carta:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px #00000036;
+}
+
+
+.carta a{
+    font-size: 1.3rem;
+    color: tomato;
+}
+.cont:hover .carta:not(:hover){
+    filter: blur(1px)
+}
+
+.carta a:first-of-type {
+    animation: bounce infinite 2s;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(1rem);
+    }
+
+    60% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
